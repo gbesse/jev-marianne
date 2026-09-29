@@ -1,7 +1,7 @@
 {
   "name": "@gbesse/jev-marianne",
-  "version": "0.1.0",
-  "description": "Version political commitments and detect how sourced promises change over time.",
+  "version": "0.1.1",
+  "description": "Versionne les engagements politiques et détecte comment les promesses sourcées évoluent dans le temps.",
   "type": "module",
   "license": "MIT",
   "engines": {

@@ -1,4 +1,4 @@
-// Purpose: Version sourced political commitments and classify relationships between two statements.
+// Objectif : implémenter la frontière de décision métier propre au dépôt.
 import { readFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 

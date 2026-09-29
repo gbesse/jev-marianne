@@ -1,4 +1,4 @@
-// Purpose: Describe sourced political commitments and relationship decisions.
+// Objectif : décrire les types de l’API métier publique.
 import type { JevProvider } from "./jev.mjs";
 export type Commitment = {
   id: string;

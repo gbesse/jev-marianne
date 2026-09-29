@@ -1,4 +1,4 @@
-// Purpose: Demonstrate promise comparison without a network call.
+// Objectif : démontrer la frontière de décision sans appel réseau.
 import { compareCommitments } from "../src/index.mjs";
 import { createFakeProvider } from "../src/jev.mjs";
 const base = {

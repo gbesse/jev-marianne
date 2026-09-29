@@ -1,5 +1,5 @@
-# How it decides
+# Comment la décision est prise
 
-Jev Marianne turns sourced political commitments into stable records, then classifies a later statement as a new promise, clarification, reformulation, possible reversal, or unrelated statement.
+Les identifiants, les dates et les égalités exactes restent traités par le code. Jev compare uniquement deux déclarations sourcées. Le résultat ne dit pas si une promesse est vraie, souhaitable, financée ou tenue.
 
-The exact question and criteria live beside the call in [src/index.mjs](../src/index.mjs), making review and version control straightforward. Dates, identifiers, arithmetic, candidate generation, thresholds and state transitions remain code-owned. Synthetic demo probabilities are illustrative. Calibrate review thresholds on representative human labels before operational use.
+La question et les critères exacts sont versionnés dans [`src/index.mjs`](../src/index.mjs). Les probabilités de la démonstration sont synthétiques. Calibrez les seuils de revue sur des cas français annotés et représentatifs avant tout usage opérationnel.
