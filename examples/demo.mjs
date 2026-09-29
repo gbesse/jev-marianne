@@ -1,17 +1,18 @@
 // Objectif : démontrer la frontière de décision sans appel réseau.
+import assert from "node:assert/strict";
 import { compareCommitments } from "../src/index.mjs";
 import { createFakeProvider } from "../src/jev.mjs";
 const base = {
-  id: "housing-1",
+  id: "logement-1",
   actor: "Candidate A",
-  topic: "housing",
-  text: "Build 100,000 homes each year.",
+  topic: "logement",
+  text: "Construire 100 000 logements chaque année.",
   source: { url: "https://example.test/programme", date: "2026-01-10" },
 };
 const later = {
   ...base,
-  id: "housing-2",
-  text: "Aim for up to 100,000 homes when finances permit.",
+  id: "logement-2",
+  text: "Viser jusqu’à 100 000 logements si les finances le permettent.",
   source: { url: "https://example.test/speech", date: "2026-09-01" },
 };
 const provider = createFakeProvider(() => ({
@@ -32,4 +33,6 @@ const provider = createFakeProvider(() => ({
   },
   usage: { input_tokens: 180, output_tokens: 0 },
 }));
-console.log(await compareCommitments(base, later, provider));
+const resultat = await compareCommitments(base, later, provider);
+assert.equal(resultat.relation, "possible_reversal");
+console.log(JSON.stringify(resultat, null, 2));
