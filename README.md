@@ -2,7 +2,7 @@
 
 **Versionne les engagements politiques et détecte comment les promesses sourcées évoluent dans le temps.**
 
-[![Tests](https://github.com/gbesse/jev-marianne/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-marianne/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.2 · Documentation française
+[![Tests](https://github.com/gbesse/jev-marianne/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-marianne/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.3 · Documentation française
 
 Jev Marianne transforme des engagements politiques sourcés en enregistrements stables, puis classe une déclaration ultérieure comme nouvel engagement, clarification, reformulation, possible revirement ou propos sans rapport.
 
@@ -67,10 +67,20 @@ console.log(JSON.stringify(resultat, null, 2));
 Lancez-le avec :
 
 ```sh
-npm run demo
+npm run demo:principal
 ```
 
 Résultat à repérer : `relation: possible_reversal`.
+
+### Cas limite à tester
+
+Un engagement strictement identique est classé sans consulter Jev. Le code se trouve dans [`examples/cas-limite.mjs`](examples/cas-limite.mjs).
+
+```sh
+npm run demo:limite
+```
+
+Résultat à repérer : `relation: unchanged · appels Jev: 0`. La commande `npm run demo` exécute les deux exemples.
 
 ## Utilisation de la bibliothèque
 
