@@ -1,6 +1,6 @@
 {
   "name": "@gbesse/jev-marianne",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Versionne les engagements politiques et détecte comment les promesses sourcées évoluent dans le temps.",
   "type": "module",
   "license": "MIT",
@@ -26,7 +26,8 @@
     "test": "node --test",
     "demo": "node examples/demo.mjs && node examples/cas-limite.mjs",
     "demo:principal": "node examples/demo.mjs",
-    "demo:limite": "node examples/cas-limite.mjs"
+    "demo:limite": "node examples/cas-limite.mjs",
+    "demo:parcours": "node examples/parcours-comparatif.mjs"
   },
   "devDependencies": {
     "typescript": "5.9.3"
